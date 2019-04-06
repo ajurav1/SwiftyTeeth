@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BVy-H3-is1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BVy-H3-is1">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -74,21 +73,53 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZWI-ZS-YUy">
-                                <rect key="frame" x="16" y="86" width="343" height="561"/>
+                                <rect key="frame" x="16" y="134" width="343" height="513"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Charcterstics" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5ZF-GM-NRd">
+                                <rect key="frame" x="20" y="84" width="121" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xae-ST-Xk9">
+                                <rect key="frame" x="161" y="84" width="121" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSM-8q-62X">
+                                <rect key="frame" x="292" y="84" width="73" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="UnSubscribe"/>
+                                <connections>
+                                    <action selector="unSubscribeAction:" destination="b0Y-dl-iTq" eventType="touchUpInside" id="Z2W-3I-S0H"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ZWI-ZS-YUy" firstAttribute="leading" secondItem="HxR-xO-DWK" secondAttribute="leadingMargin" id="0pI-OQ-FzR"/>
                             <constraint firstAttribute="bottom" secondItem="ZWI-ZS-YUy" secondAttribute="bottom" constant="20" symbolic="YES" id="1pr-fM-YA8"/>
-                            <constraint firstItem="ZWI-ZS-YUy" firstAttribute="top" secondItem="XZt-fx-MMv" secondAttribute="bottom" constant="22" id="KvI-f2-kAD"/>
+                            <constraint firstItem="5ZF-GM-NRd" firstAttribute="leading" secondItem="HxR-xO-DWK" secondAttribute="leading" constant="20" id="3PK-rc-s92"/>
+                            <constraint firstItem="ZWI-ZS-YUy" firstAttribute="top" secondItem="cSM-8q-62X" secondAttribute="bottom" constant="20" id="B1G-dS-EOs"/>
+                            <constraint firstItem="ZWI-ZS-YUy" firstAttribute="top" secondItem="5ZF-GM-NRd" secondAttribute="bottom" constant="20" id="CTr-5F-pBd"/>
+                            <constraint firstItem="Xae-ST-Xk9" firstAttribute="width" secondItem="5ZF-GM-NRd" secondAttribute="width" id="NSU-cc-QQI"/>
+                            <constraint firstItem="5ZF-GM-NRd" firstAttribute="top" secondItem="XZt-fx-MMv" secondAttribute="bottom" constant="20" id="P2i-Nd-AGI"/>
+                            <constraint firstItem="cSM-8q-62X" firstAttribute="top" secondItem="XZt-fx-MMv" secondAttribute="bottom" constant="20" id="eL5-xR-PAX"/>
+                            <constraint firstItem="cSM-8q-62X" firstAttribute="leading" secondItem="Xae-ST-Xk9" secondAttribute="trailing" constant="10" id="gys-xL-uov"/>
+                            <constraint firstItem="ZWI-ZS-YUy" firstAttribute="top" secondItem="Xae-ST-Xk9" secondAttribute="bottom" constant="20" id="m2w-Y3-SAo"/>
+                            <constraint firstItem="Xae-ST-Xk9" firstAttribute="leading" secondItem="5ZF-GM-NRd" secondAttribute="trailing" constant="20" id="n7N-xw-7tM"/>
                             <constraint firstItem="ZWI-ZS-YUy" firstAttribute="trailing" secondItem="HxR-xO-DWK" secondAttribute="trailingMargin" id="o9I-5Y-xsD"/>
+                            <constraint firstItem="Xae-ST-Xk9" firstAttribute="top" secondItem="XZt-fx-MMv" secondAttribute="bottom" constant="20" id="xyy-DA-Kjz"/>
+                            <constraint firstAttribute="trailing" secondItem="cSM-8q-62X" secondAttribute="trailing" constant="10" id="yQn-bv-IOd"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="charTextField" destination="5ZF-GM-NRd" id="uLw-Sw-kyR"/>
+                        <outlet property="serviceTextField" destination="Xae-ST-Xk9" id="qkU-nU-lGe"/>
                         <outlet property="textView" destination="ZWI-ZS-YUy" id="Cxm-IE-9IU"/>
                     </connections>
                 </viewController>

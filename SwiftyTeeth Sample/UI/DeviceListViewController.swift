@@ -30,7 +30,7 @@ class DeviceListViewController: UITableViewController {
 extension DeviceListViewController: SwiftyTeethable {
     @objc func scanTapped() {
         // TODO: Use the changes API to update the list
-        swiftyTeeth.scan(for: 1) { devices in
+        swiftyTeeth.scan(for: 5) { devices in
             self.devices = devices
             self.tableView.reloadData()
         }
